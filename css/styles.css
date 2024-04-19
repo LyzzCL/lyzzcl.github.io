@@ -26,7 +26,7 @@ main {
 
   /* Article container as a Slider for mobile */
   > div {
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     overflow-x: scroll;
     overscroll-behavior-x: contain;
@@ -36,7 +36,7 @@ main {
 
   > button {
     position: absolute;
-    height: 100vh;
+    height: 100dvh;
     color: var(--primary-color);
     font-size: 2.4rem;
     background: none;
@@ -208,7 +208,7 @@ article:nth-child(1) {
   > div {
     display: flex;
     flex-direction: column;
-    height: 90vh;
+    height: 100dvh;
   }
   > div ul {
     color: var(--primary-color);
@@ -227,7 +227,7 @@ article:nth-child(2) {
   > div {
     display: flex;
     flex-direction: column;
-    height: 90vh;
+    height: 100vh;
 
     > h2:nth-of-type(2) {
       margin-top: auto;
