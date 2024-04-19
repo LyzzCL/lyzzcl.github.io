@@ -208,7 +208,7 @@ article:nth-child(1) {
   > div {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 90vh;
   }
   > div ul {
     color: var(--primary-color);
@@ -227,7 +227,7 @@ article:nth-child(2) {
   > div {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 90vh;
 
     > h2:nth-of-type(2) {
       margin-top: auto;
