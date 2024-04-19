@@ -41,7 +41,8 @@ main {
     font-size: 2.4rem;
     background: none;
     border: none;
-    margin: 0 16px;
+    /* margin: 0 16px; */
+    padding: 0 16px;
   }
 
   #btnNext {
@@ -74,7 +75,6 @@ article {
   display: flex;
   flex-direction: column;
   scroll-snap-align: center;
-  /* overflow-y: ; */
   > div {
     h2 {
       text-align: center;
@@ -135,15 +135,15 @@ article {
     > div > section > div {
       width: 100vw;
     }
-    
-    > div >section > div > div {
+
+    > div > section > div > div {
       display: flex;
       flex-direction: column;
       margin: 0 48px 24px 48px;
       border: 1px solid var(--primary-color);
-        box-shadow: 4px 4px 4px #14ffeb3a;
-        border-radius: 8px;
-        margin-bottom: 16px;
+      box-shadow: 4px 4px 4px #14ffeb3a;
+      border-radius: 8px;
+      margin-bottom: 16px;
 
       h4 {
         font-size: 1.3rem;
@@ -153,12 +153,10 @@ article {
 
       figure {
         img {
-
           padding: 24px 24px;
           border-radius: 16px;
           width: 100%;
           object-fit: contain;
-          /* drop-shadow: 4px 4px 4px #14ffeb3a; */
         }
         figcaption {
           margin: 0 16px 24px 16px;
@@ -210,17 +208,33 @@ article:nth-child(1) {
   > div {
     display: flex;
     flex-direction: column;
+    height: 100vh;
   }
   > div ul {
     color: var(--primary-color);
     display: flex;
     justify-content: space-evenly;
-    margin: auto 0 156px 0;
-    bottom: 0;
+    margin: auto 0 64px 0;
 
     svg {
       fill: var(--primary-color);
       width: 32px;
+    }
+  }
+}
+
+article:nth-child(2) {
+  > div {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    > h2:nth-of-type(2) {
+      margin-top: auto;
+    }
+
+    > p:last-child {
+      margin-bottom: auto;
     }
   }
 }
@@ -239,5 +253,5 @@ video {
   min-width: 100%;
   min-height: 100%;
   z-index: -15;
-  filter: blur(24px)
+  filter: blur(24px);
 }
