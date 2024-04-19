@@ -1,0 +1,243 @@
+:root {
+  --primary-color: #14ffec;
+  --primary-warm-color: #0d7377;
+  --dark-color: #212121;
+  --dark-warm-color: #2b2730;
+  --light-clor: whitesmoke;
+  --title-font: "Nunito", sans-serif;
+  --text-font: "Rubik", sans-serif;
+}
+
+body {
+  background-color: var(--dark-color);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--text-font);
+  color: var(--light-clor);
+  list-style: none;
+}
+
+main {
+  background-color: var(--dark-color);
+
+  /* Article container as a Slider for mobile */
+  > div {
+    height: 100vh;
+    display: flex;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+
+  > button {
+    position: absolute;
+    height: 100vh;
+    color: var(--primary-color);
+    font-size: 2.4rem;
+    background: none;
+    border: none;
+    margin: 0 16px;
+  }
+
+  #btnNext {
+    right: 0;
+  }
+
+  /* Active article indicator */
+  > ul {
+    position: absolute;
+    font-size: 1.6rem;
+    bottom: 0;
+    display: flex;
+    width: 100vw;
+    justify-content: space-evenly;
+    padding: 0 52px;
+    margin-bottom: 64px;
+
+    li {
+      color: var(--primary-warm-color);
+    }
+
+    li:nth-child(1) {
+      color: var(--primary-color);
+    }
+  }
+}
+
+/* General styles for all articles */
+article {
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: center;
+  /* overflow-y: ; */
+  > div {
+    h2 {
+      text-align: center;
+      width: 100vw;
+      font-family: var(--title-font);
+      font-size: 2.5rem;
+      font-weight: normal;
+      color: var(--primary-color);
+      margin: 32px 0 16px 0;
+    }
+
+    > p {
+      font-size: 1.4rem;
+      margin: 0 32px 24px 42px;
+      text-wrap: balance;
+      text-align: center;
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        font-size: 1.4rem;
+        margin: 24px auto;
+        padding: 4px 8px;
+        border-radius: 4px;
+        background: var(--primary-color);
+        color: var(--dark-color);
+      }
+
+      /* Skills article */
+      > ul {
+        place-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 48px 16px 48px;
+        gap: 8px;
+
+        li {
+          place-content: center;
+          padding: 6px 8px;
+          border-radius: 4px;
+          border: 1px solid var(--primary-color);
+          color: var(--primary-color);
+          font-weight: 800;
+
+          svg {
+            width: 28px;
+            display: block;
+          }
+        }
+      }
+    }
+
+    /* Portfolio article */
+
+    > div > section > div {
+      width: 100vw;
+    }
+    
+    > div >section > div > div {
+      display: flex;
+      flex-direction: column;
+      margin: 0 48px 24px 48px;
+      border: 1px solid var(--primary-color);
+        box-shadow: 4px 4px 4px #14ffeb3a;
+        border-radius: 8px;
+        margin-bottom: 16px;
+
+      h4 {
+        font-size: 1.3rem;
+        margin: 16px 0;
+        text-align: center;
+      }
+
+      figure {
+        img {
+
+          padding: 24px 24px;
+          border-radius: 16px;
+          width: 100%;
+          object-fit: contain;
+          /* drop-shadow: 4px 4px 4px #14ffeb3a; */
+        }
+        figcaption {
+          margin: 0 16px 24px 16px;
+          font-size: 1.1rem;
+          text-wrap: pretty;
+        }
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto 4px 8px 4px;
+        li {
+          color: var(--primary-color);
+          border-radius: 4px;
+          padding: 2px 4px;
+          margin: 2px 4px;
+        }
+        li:before {
+          content: "> ";
+        }
+        li:last-child {
+          place-self: flex-end;
+          margin-left: auto;
+          color: var(--primary-warm-color);
+        }
+        li:last-child:before {
+          content: "";
+        }
+      }
+    }
+  }
+
+  /* Just to make img bigger */
+  section:nth-child(2) {
+    > div:nth-child(2) {
+      > figure {
+        img {
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+/* About me social media links */
+article:nth-child(1) {
+  > div {
+    display: flex;
+    flex-direction: column;
+  }
+  > div ul {
+    color: var(--primary-color);
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto 0 156px 0;
+    bottom: 0;
+
+    svg {
+      fill: var(--primary-color);
+      width: 32px;
+    }
+  }
+}
+
+/* Portfolio overflow container */
+article:nth-child(4) {
+  > div {
+    overflow-y: auto;
+  }
+}
+
+video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -15;
+  filter: blur(24px)
+}
