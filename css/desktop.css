@@ -18,13 +18,14 @@
 
 main {
   background: none;
-  > div::-webkit-scrollbar {
+  /* > div::-webkit-scrollbar {
     display: none;
-  }
+  } */
 
   > div {
-    overflow-y: hidden;
-    overflow-x: scroll;
+    flex-direction: column;
+    /* overflow-y: hidden; */
+    overflow-x: hidden;
 
     article {
       h2 {
@@ -33,20 +34,28 @@ main {
 
       flex-shrink: 0;
       width: 100vw;
-      height: 100vh;
+      /* height: 100vh; */
 
       > div {
-        height: 100%;
-        margin: 80px;
+        height: fit-content;
+        margin: 32px 64px 0 64px;
         border-radius: 16px;
         background-color: #212121cc;
       }
     }
 
     article:nth-child(1) {
-      > div > ul {
-        margin: auto 0 80px 0;
+      > div {
+        height: fit-content;
 
+        p {
+          max-width: 1300px;
+          margin: 0 auto 24px auto;
+          padding-inline: 64px;
+          text-wrap: pretty;
+        }
+      }
+      > div > ul {
         svg {
           fill: var(--primary-color);
           width: 42px;
@@ -60,7 +69,29 @@ main {
     }
   }
 
+  article:nth-child(2) {
+    > div {
+      height: fit-content;
+
+      p {
+        max-width: 1300px;
+        margin: 0 auto 24px auto;
+        padding-inline: 32px;
+      }
+    }
+    p:last-child {
+      margin-bottom: 32px;
+    }
+  }
+
+  article:nth-child(3) {
+    > div {
+      padding-bottom: 28px;
+    }
+  }
+
   button {
+    display: none;
     width: 128px;
     height: calc(100vh - 160px);
     font-size: 4rem;
@@ -81,35 +112,125 @@ main {
   }
 }
 
-/* Portfolio */
-body > main > div > article:nth-child(4) > div > div {
-  display: grid;
-  justify-items: center;
-  grid-template-areas:
-    "a b"
-    "c c";
-  margin: 0;
+/* First card background-color trick 0w0 */
+body > main > div > article:nth-child(1) > div {
+  background-color: transparent;
 
-  > div {
+  > h2 {
+    background-color: #212121cc;
+    padding: 32px 0 16px 0;
     margin: 0;
+    border-radius: 16px 16px 0 0;
+    order: 2;
+  }
+  > p {
+    width: 100%;
+    max-width: none;
+    margin: auto;
+    padding: 0 64px 24px 64px;
+    display: inline-block;
+    background-color: #212121cc;
+    order: 3;
   }
 
-  > section > div {
-    width: 30vw;
-
-    > div {
-      background-color: #212121aa;
-    }
+  > p:last-of-type {
+    border-radius: 0 0 16px 16px;
+    padding-bottom: 32px;
   }
 
-  > section:nth-child(3) {
-    grid-area: c;
+  > ul {
+    background-color: #212121cc;
+    border-radius: 16px;
+    padding: 24px 0;
+    margin: 0 0 32px 0;
+    order: 1;
+  }
 
-    > div {
-      display: grid;
+  display: grid;
+}
+
+/* Studies and Languages */
+body > main > div > article:nth-child(2) > div {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-auto-flow: column;
+  text-align: center;
+
+  /* padding-inline: 128px; */
+  > p {
+    min-width: 30vw;
+    place-self: center;
+  }
+  > p:nth-of-type(4),
+  p:nth-of-type(5) {
+    font-size: 1.8rem;
+  }
+}
+
+/* Skills grid */
+body > main > div > article:nth-child(3) > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  "a a"
+  "b c"
+  "d e";
+
+  > h2 {
+    grid-area: a;
+  }
+
+  > section {
+    width: 100%;
+  }
+}
+
+/* Portfolio grid */
+body > main > div > article:nth-child(4) > div > div > section > div {
+  width: fit-content;
+}
+
+@media (min-width: 900px) {
+  body > main > div > article:nth-child(4) > div > div {
+    display: grid;
+    justify-items: center;
+    grid-template-areas:
+      "a b"
+      "c c";
+    margin: 0;
+
+    > section {
       width: 100%;
-      padding-inline: 64px;
-      grid-template-columns: repeat(3, 1fr);
     }
+
+    > div {
+      margin: 0;
+    }
+
+    > section > div {
+      width: 100%;
+
+      > div {
+        background-color: #212121aa;
+      }
+    }
+
+    > section:nth-child(3) {
+      grid-area: c;
+
+      > div {
+        display: grid;
+        width: 100%;
+        /* padding-inline: 64px; */
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 28px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1320px) {
+  body > main > div > article:nth-child(4) > div > div > section:nth-child(3) > div {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
