@@ -153,11 +153,12 @@ body > main > div > article:nth-child(1) > div {
 body > main > div > article:nth-child(2) > div {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: min-content 1fr 1fr 1fr;
+  grid-auto-rows: minmax(50px,auto);
   grid-auto-flow: column;
   text-align: center;
+  padding-bottom: 16px;
 
-  /* padding-inline: 128px; */
   > p {
     min-width: 30vw;
     place-self: center;
@@ -165,6 +166,10 @@ body > main > div > article:nth-child(2) > div {
   > p:nth-of-type(4),
   p:nth-of-type(5) {
     font-size: 1.8rem;
+  }
+
+  h2 {
+    margin-block: 16px;
   }
 }
 
