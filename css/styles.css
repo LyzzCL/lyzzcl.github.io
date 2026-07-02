@@ -14,6 +14,26 @@
     src: url("../assets/fonts/rubik-300-latin.woff2") format("woff2");
 }
 
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: 250ms;
+    animation-timing-function: ease;
+}
+
+main {
+    view-transition-name: main;
+}
+
+nav,
+.social-footer,
+.bg-animation {
+    view-transition-name: none;
+}
+
 main {
   position: relative;
   isolation: isolate;
@@ -573,85 +593,4 @@ body {
     border-color: transparent;
 }
 
-.main-loader {
-    position: fixed;
-    inset: 0;
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    min-height: 300px;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition:
-        opacity 80ms ease,
-        visibility 80ms ease;
-}
 
-html.is-main-loading .main-loader,
-html.is-main-navigating .main-loader {
-    opacity: 1;
-    visibility: visible;
-    transition: none;
-}
-
-html.is-main-loading .bg-animation,
-html.is-main-navigating .bg-animation {
-    z-index: 100;
-}
-
-html.is-main-loading .navbar,
-html.is-main-navigating .navbar {
-    position: relative;
-    z-index: 200;
-}
-
-html.is-main-loading .social-footer,
-html.is-main-navigating .social-footer {
-    position: relative;
-    z-index: 200;
-}
-
-.main-loader span {
-    display: block;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    border: none;
-    outline: none;
-    background: #14ffec;
-    box-shadow: 0 0 10px rgba(20, 255, 236, 0.35);
-    animation-name: loader-wave;
-    animation-duration: 700ms;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-}
-
-.main-loader span:nth-child(2) { animation-delay: 100ms; }
-.main-loader span:nth-child(3) { animation-delay: 200ms; }
-.main-loader span:nth-child(4) { animation-delay: 300ms; }
-.main-loader span:nth-child(5) { animation-delay: 400ms; }
-
-@keyframes loader-wave {
-    0% {
-        transform: translate3d(0, 0, 0);
-    }
-    30% {
-        transform: translate3d(0, -14px, 0);
-    }
-    60% {
-        transform: translate3d(0, 0, 0);
-    }
-    100% {
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .main-loader span {
-    animation-duration: 700ms !important;
-    animation-iteration-count: infinite !important;
-  }
-}
