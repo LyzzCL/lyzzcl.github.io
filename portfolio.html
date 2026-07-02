@@ -13,6 +13,9 @@
     <meta property="og:description" content="My Skills & Portfolio" />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/desktop.css" media="screen and (min-width: 768px)" />
+    <script>
+      document.documentElement.classList.add("is-main-loading");
+    </script>
 <title>LyzzCL | Portfolio</title>
   </head>
   <body>
@@ -25,6 +28,14 @@
       <a href="/skills">Skills</a>
       <a href="/portfolio" aria-current="page">Portfolio</a>
     </nav>
+
+    <div class="main-loader" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
     <main id="main-content" class="page portfolio-page">
       <div class="portfolio-list">
