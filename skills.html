@@ -6,12 +6,17 @@
     <meta name="theme-color" content="#212121" media="(prefers-color-scheme: dark)" />
     <meta name="theme-color" content="#f5f5f5" media="(prefers-color-scheme: light)" />
     <link rel="shortcut icon" href="./assets/icons/favicon.ico" type="image/x-icon" />
+    <link rel="canonical" href="https://www.lyzzcl.dev/skills" />
+    <meta property="og:url" content="https://www.lyzzcl.dev/skills" />
     <meta property="og:title" content="Lyzz Dev" />
-    <meta property="og:url" content="https://www.lyzzcl.dev/" />
+    <meta property="og:url" content="https://www.lyzzcl.dev/skills" />
     <meta property="og:image" content="https://www.lyzzcl.dev/assets/imgs/OG-Image.webp" />
     <meta property="og:description" content="My Skills & Portfolio" />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/desktop.css" media="screen and (min-width: 768px)" />
+    <script>
+      document.documentElement.classList.add("is-main-loading");
+    </script>
 <title>LyzzCL | Skills</title>
   </head>
   <body>
@@ -20,10 +25,18 @@
     <div class="bg-animation" aria-hidden="true"></div>
 
     <nav class="navbar" aria-label="Main navigation">
-      <a href="./index.html">Home</a>
-      <a href="./skills.html" aria-current="page">Skills</a>
-      <a href="./portfolio.html">Portfolio</a>
+      <a href="/">Home</a>
+      <a href="/skills" aria-current="page">Skills</a>
+      <a href="/portfolio">Portfolio</a>
     </nav>
+
+    <div class="main-loader" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
     <main id="main-content" class="page skills-page">
       <div class="skills-grid">
@@ -36,6 +49,7 @@
             <li><svg><use href="./assets/icons/sprite.svg#icon-python"/></svg> Python</li>
             <li><svg><use href="./assets/icons/sprite.svg#icon-openjdk"/></svg> Java</li>
             <li><svg><use href="./assets/icons/sprite.svg#icon-php"/></svg> PHP</li>
+            <li><svg><use href="./assets/icons/sprite.svg#icon-csharp"/></svg> C#</li>
             <li>SQL</li>
           </ul>
         </section>
@@ -55,6 +69,7 @@
           <h3>Backend & APIs</h3>
           <ul>
             <li><svg><use href="./assets/icons/sprite.svg#icon-nodedotjs"/></svg> Node.js</li>
+            <li><svg><use href="./assets/icons/sprite.svg#icon-dotnet"/></svg> .NET</li>
             <li><svg><use href="./assets/icons/sprite.svg#icon-express"/></svg> Express</li>
             <li><svg><use href="./assets/icons/sprite.svg#icon-flask"/></svg> Flask</li>
             <li><svg><use href="./assets/icons/sprite.svg#icon-codeigniter"/></svg> CodeIgniter</li>
@@ -66,6 +81,7 @@
           <h3>QA & Testing</h3>
           <ul>
             <li><svg><use href="./assets/icons/sprite.svg#icon-jest"/></svg> Jest</li>
+            <li><svg><use href="./assets/icons/sprite.svg#icon-playwright"/></svg> Playwright</li>
             <li><svg><use href="./assets/icons/sprite.svg#icon-puppeteer"/></svg> Puppeteer</li>
             <li><svg><use href="./assets/icons/sprite.svg#icon-postman"/></svg> Postman</li>
             <li><svg><use href="./assets/icons/sprite.svg#icon-spigotmc"/></svg> SpigotMC</li>
@@ -73,22 +89,12 @@
         </section>
 
         <section>
-          <h3>Dev Tools</h3>
+          <h3>Operating Systems</h3>
           <ul>
-            <li><svg><use href="./assets/icons/sprite.svg#icon-git"/></svg> Git</li>
-            <li><svg><use href="./assets/icons/sprite.svg#icon-visualstudiocode"/></svg> VS Code</li>
-            <li><svg><use href="./assets/icons/sprite.svg#icon-jira"/></svg> Jira</li>
-            <li><svg><use href="./assets/icons/sprite.svg#icon-sourcetree"/></svg> Sourcetree</li>
-            <li><svg><use href="./assets/icons/sprite.svg#icon-intellijidea"/></svg> IntelliJ IDEA</li>
-            <li><svg><use href="./assets/icons/sprite.svg#icon-apachenetbeanside"/></svg> NetBeans</li>
-            <li><svg><use href="./assets/icons/sprite.svg#icon-npm"/></svg> npm</li>
-            <li><svg><use href="./assets/icons/sprite.svg#icon-docker"/></svg> Docker</li>
-            <li><svg><use href="./assets/icons/sprite.svg#icon-figma"/></svg> Figma</li>
-            <li><svg><use href="./assets/icons/sprite.svg#icon-netlify"/></svg> Netlify</li>
-            <li><svg><use href="./assets/icons/sprite.svg#icon-dbeaver"/></svg> DBeaver</li>
-            <li><svg><use href="./assets/icons/sprite.svg#icon-trello"/></svg> Trello</li>
-            <li><svg><use href="./assets/icons/sprite.svg#icon-onlyoffice"/></svg> ONLYOFFICE</li>
-            <li><svg><use href="./assets/icons/sprite.svg#icon-platzi"/></svg> Platzi</li>
+            <li><svg><use href="./assets/icons/sprite.svg#icon-windows"/></svg> Windows 11</li>
+            <li><svg><use href="./assets/icons/sprite.svg#icon-cachyos"/></svg> CachyOS</li>
+            <li><svg><use href="./assets/icons/sprite.svg#icon-linuxmint"/></svg> Linux Mint</li>
+            <li><svg><use href="./assets/icons/sprite.svg#icon-android"/></svg> Android</li>
           </ul>
         </section>
 
@@ -97,19 +103,39 @@
           <ul>
             <li><svg><use href="./assets/icons/sprite.svg#icon-godotengine"/></svg> Godot Engine</li>
             <li><svg><use href="./assets/icons/sprite.svg#icon-renpy"/></svg> Ren'Py</li>
+            <li><svg><use href="./assets/icons/sprite.svg#icon-aseprite"/></svg> Aseprite</li>
+            <li><svg><use href="./assets/icons/sprite.svg#icon-photopea"/></svg> Photopea</li>
+            <li><svg><use href="./assets/icons/sprite.svg#icon-sharex"/></svg> ShareX</li>
             <li><svg><use href="./assets/icons/sprite.svg#icon-davinciresolve"/></svg> DaVinci Resolve</li>
             <li><svg><use href="./assets/icons/sprite.svg#icon-inkscape"/></svg> Inkscape</li>
             <li><svg><use href="./assets/icons/sprite.svg#icon-obsstudio"/></svg> OBS Studio</li>
-            <li><svg><use href="./assets/icons/sprite.svg#icon-laragon"/></svg> Laragon</li>
           </ul>
         </section>
 
-        <section>
-          <h3>Operating Systems</h3>
+        <section class="skills-section-full">
+          <h3>Dev Tools</h3>
           <ul>
-            <li><svg><use href="./assets/icons/sprite.svg#icon-linux"/></svg> Linux</li>
-            <li><svg><use href="./assets/icons/sprite.svg#icon-windows"/></svg> Windows 11</li>
-            <li><svg><use href="./assets/icons/sprite.svg#icon-android"/></svg> Android</li>
+            <li><svg><use href="./assets/icons/sprite.svg#icon-git"/></svg> Git</li>
+            <li><svg><use href="./assets/icons/sprite.svg#icon-visualstudiocode"/></svg> VS Code</li>
+            <li><svg><use href="./assets/icons/sprite.svg#icon-jira"/></svg> Jira</li>
+            <li><svg><use href="./assets/icons/sprite.svg#icon-sourcetree"/></svg> Sourcetree</li>
+            <li><svg><use href="./assets/icons/sprite.svg#icon-intellijidea"/></svg> IntelliJ IDEA</li>
+            <li><svg><use href="./assets/icons/sprite.svg#icon-rider"/></svg> JetBrains Rider</li>
+            <li><svg><use href="./assets/icons/sprite.svg#icon-apachenetbeanside"/></svg> NetBeans</li>
+            <li><svg><use href="./assets/icons/sprite.svg#icon-npm"/></svg> npm</li>
+            <li><svg><use href="./assets/icons/sprite.svg#icon-docker"/></svg> Docker</li>
+            <li><svg><use href="./assets/icons/sprite.svg#icon-figma"/></svg> Figma</li>
+            <li><svg><use href="./assets/icons/sprite.svg#icon-netlify"/></svg> Netlify</li>
+            <li><svg><use href="./assets/icons/sprite.svg#icon-dbeaver"/></svg> DBeaver</li>
+            <li><svg><use href="./assets/icons/sprite.svg#icon-trello"/></svg> Trello</li>
+            <li><svg><use href="./assets/icons/sprite.svg#icon-onlyoffice"/></svg> ONLYOFFICE</li>
+            <li><svg><use href="./assets/icons/sprite.svg#icon-laragon"/></svg> Laragon</li>
+            <li><svg><use href="./assets/icons/sprite.svg#icon-claudecode"/></svg> Claude Code</li>
+            <li><svg><use href="./assets/icons/sprite.svg#icon-opencode"/></svg> Open Code</li>
+            <li><svg><use href="./assets/icons/sprite.svg#icon-antigravity"/></svg> Antigravity IDE</li>
+            <li><svg><use href="./assets/icons/sprite.svg#icon-warp"/></svg> Warp</li>
+            <li><svg><use href="./assets/icons/sprite.svg#icon-zed"/></svg> Zed</li>
+            <li><svg><use href="./assets/icons/sprite.svg#icon-bruno"/></svg> Bruno</li>
           </ul>
         </section>
       </div>
@@ -136,4 +162,3 @@
     <script src="main.js" defer></script>
 </body>
 </html>
-

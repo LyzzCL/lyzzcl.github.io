@@ -31,6 +31,10 @@
             href="./css/desktop.css"
             media="screen and (min-width: 768px)"
         />
+        <link rel="canonical" href="https://www.lyzzcl.dev/" />
+        <script>
+          document.documentElement.classList.add("is-main-loading");
+        </script>
 <title>LyzzCL | Home</title>
     </head>
     <body>
@@ -39,10 +43,18 @@
         <div class="bg-animation" aria-hidden="true"></div>
 
         <nav class="navbar" aria-label="Main navigation">
-            <a href="./index.html" aria-current="page">Home</a>
-            <a href="./skills.html">Skills</a>
-            <a href="./portfolio.html">Portfolio</a>
+            <a href="/" aria-current="page">Home</a>
+            <a href="/skills">Skills</a>
+            <a href="/portfolio">Portfolio</a>
         </nav>
+
+        <div class="main-loader" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
 
         <main id="main-content" class="page home">
             <div class="home-grid">
@@ -93,8 +105,12 @@
                 <section class="section-card avatar-card" aria-label="Avatar">
                     <img
                         src="./assets/imgs/AnimeAvatar.webp"
-                        alt="Anime-style portrait of Lyzz"
-                        loading="lazy"
+                        alt="Anime-style portrait of me as a cute wolf girl :3 (AI Generated with ChatGPT)"
+                        width="1024"
+                        height="1536"
+                        loading="eager"
+                        fetchpriority="high"
+                        decoding="async"
                     />
                 </section>
 
@@ -224,4 +240,3 @@
         <script src="main.js" defer></script>
 </body>
 </html>
-

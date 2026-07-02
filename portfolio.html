@@ -6,12 +6,16 @@
     <meta name="theme-color" content="#212121" media="(prefers-color-scheme: dark)" />
     <meta name="theme-color" content="#f5f5f5" media="(prefers-color-scheme: light)" />
     <link rel="shortcut icon" href="./assets/icons/favicon.ico" type="image/x-icon" />
+    <link rel="canonical" href="https://www.lyzzcl.dev/portfolio" />
     <meta property="og:title" content="Lyzz Dev" />
-    <meta property="og:url" content="https://www.lyzzcl.dev/" />
+    <meta property="og:url" content="https://www.lyzzcl.dev/portfolio" />
     <meta property="og:image" content="https://www.lyzzcl.dev/assets/imgs/OG-Image.webp" />
     <meta property="og:description" content="My Skills & Portfolio" />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/desktop.css" media="screen and (min-width: 768px)" />
+    <script>
+      document.documentElement.classList.add("is-main-loading");
+    </script>
 <title>LyzzCL | Portfolio</title>
   </head>
   <body>
@@ -20,10 +24,18 @@
     <div class="bg-animation" aria-hidden="true"></div>
 
     <nav class="navbar" aria-label="Main navigation">
-      <a href="./index.html">Home</a>
-      <a href="./skills.html">Skills</a>
-      <a href="./portfolio.html" aria-current="page">Portfolio</a>
+      <a href="/">Home</a>
+      <a href="/skills">Skills</a>
+      <a href="/portfolio" aria-current="page">Portfolio</a>
     </nav>
+
+    <div class="main-loader" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
     <main id="main-content" class="page portfolio-page">
       <div class="portfolio-list">
@@ -178,4 +190,3 @@
     <script src="main.js" defer></script>
 </body>
 </html>
-
