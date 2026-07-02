@@ -93,10 +93,6 @@
 }
 
 .skills-grid section {
-    background: var(--card-bg);
-    border-radius: 16px;
-    padding: 20px;
-    border: 1px solid var(--primary-warm-color);
     flex: 1;
     min-width: 280px;
 }
